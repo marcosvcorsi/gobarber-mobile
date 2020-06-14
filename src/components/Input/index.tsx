@@ -29,7 +29,7 @@ const Input: React.RefForwardingComponent<InputRef, InputProps> = (
   { name, icon, containerStyle = {}, ...rest },
   ref,
 ) => {
-  const inputElementRef = useRef(null);
+  const inputElementRef = useRef<any>(null);
 
   const { registerField, defaultValue = '', error, fieldName } = useField(name);
   const inputValueRef = useRef<InputValueReference>({ value: defaultValue });
